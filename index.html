@@ -5,85 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Это сайт - резюме Татьяны Родионовой">
     <meta name="keywords" content="HTML, CSS, web-development, Tatyana, cv, resume">
+    <link rel="stylesheet" href="styles.css">
     <title>Tatyana Resume</title>
 </head>
 <body>
-    <h1>Татьяна Родионова</h1>
 
-    <img src="myPhoto.jpeg" alt="myPhoto" width="200px">
-
-    <p>Меня зовут Татьяна, <strong>мне 18 лет</strong> и я учусь на
-        программиста в городе Ярославль.<em><strong>Люблю</strong> спорт, готовить
-        и изучать что-то новое.</em>Сейчас прохожу курс от Result.School.
-    </p>
-
-    <h3>Список социальных сетей:</h3>
-    <a href="https://t.me/tatyanarod" target="_blank">Telegram</a>
-    |
-    <a href="https://vk.ru/tatyanarod" target="_blank">VK</a>
-
-    <h2>Мои хобби</h2>
-    <ol>
-        <li>Путешествия</li>
-        <li>Учеба</li>
-        <li>Спорт</li>
-        <li>Прогулки на свежем воздухе</li>
-    </ol>
-
-    <h2>Опыт работы</h2>
-    <table>
-        <thead>
-            <th>Название</th>
-            <th>Должность</th>
-            <th>Год</th>
-        </thead>
-
-        <tbody>
-            <tr>
-                <td>Член бригады ресторана</td>
-                <td>ООО"TES"</td>
-                <td>июнь 2021 - октябрь 2021</td>
-            </tr>
-
-            <tr>
-                <td>Помощник администратора</td>
-                <td>ООО"Школа программирования Coddy"</td>
-                <td>сентябрь 2023 - сейчас</td>
-            </tr>
-
-            <tr>
-                <td>Разработчик сайтов на Tilda</td>
-                <td></td>
-                <td>сентябрь 2023 - сейчас</td>
-            </tr>
-
-            <tr>
-                <td>Маркетолог по контекстной рекламе</td>
-                <td></td>
-                <td>сентябрь 2023 - сейчас</td>
-            </tr>
-        </tbody>
-    </table>
-
-    <h2>Связаться со мной</h2>
-    <form action="">
-        <div>
-            <label for="name">Ваше имя: </label>
-            <input type="text" id="name" placeholder="Введите ваше имя">
+    <div class="container">
+        <div class="card info">
+            <img src="myPhoto.jpeg" alt="myPhoto" width="200px" class="image">
+            <div class="about">
+                <h1>Татьяна Родионова</h1>
+                <p>Меня зовут Татьяна, мне 18 лет и я учусь на
+                    программиста в городе Ярославль.Люблю спорт, готовить, программировать 
+                    и изучать что-то новое.Сейчас прохожу курс "Junior Developer" от Result.School.
+                </p>
+        
+                <h3>Список социальных сетей:</h3>
+                <a href="https://t.me/tatyanarod" target="_blank">Telegram</a>
+                |
+                <a href="https://vk.ru/tatyanarod" target="_blank">VK</a>
+            </div>
         </div>
-
-        <div>
-            <label for="email">Ваш email: </label>
-            <input type="email" id="email" placeholder="Введите email">
+        <hr>
+        <div class="card hobbies">
+            <h2>Мои хобби</h2>
+            <ol>
+                <li>Путешествия</li>
+                <li>Учеба</li>
+                <li>Спорт</li>
+                <li>Прогулки на свежем воздухе</li>
+            </ol>
         </div>
-
-        <div>
-            <label for="message">Ваше сообщение: </label>
-            <br>
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Введите сообщение..."></textarea>
+        
+        <hr>
+        <div class="card work">
+            <h2>Опыт работы</h2>
+            <table class="table">
+                <thead>
+                    <th>Название</th>
+                    <th>Место работы</th>
+                    <th>Год</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Член бригады ресторана</td>
+                        <td>ООО"TES"</td>
+                        <td>июнь 2021 - октябрь 2021</td>
+                    </tr>
+                    <tr>
+                        <td>Помощник администратора</td>
+                        <td>ООО"Школа программирования Coddy"</td>
+                        <td>сентябрь 2023 - сейчас</td>
+                    </tr>
+                    <tr>
+                        <td>Разработчик сайтов на Tilda</td>
+                        <td></td>
+                        <td>сентябрь 2023 - сейчас</td>
+                    </tr>
+                    <tr>
+                        <td>Маркетолог по контекстной рекламе</td>
+                        <td></td>
+                        <td>сентябрь 2023 - сейчас</td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
-
-        <button type="submit">Отправить!</button>
-    </form>
+        <hr>
+        <div class="card message">
+            <h2>Связаться со мной</h2>
+            <form action="">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Ваше имя: </label>
+                        <input type="text" id="name" placeholder="Введите ваше имя">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Ваш email: </label>
+                        <input type="email" id="email" placeholder="Введите email">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="message">Ваше сообщение: </label>
+                    <br>
+                    <textarea name="message" id="" cols="30" rows="10" placeholder="Введите сообщение..."></textarea>
+                </div>
+                <button type="submit" class="btn">Отправить!</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
